@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konfirmasi Logout</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .confirmation-box {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .confirmation-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .confirmation-box button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+        }
+        .confirmation-box .confirm {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .confirmation-box .cancel {
+            background-color: #f44336;
+            color: white;
+        }
+        .confirmation-box .confirm:hover {
+            background-color: #45a049;
+        }
+        .confirmation-box .cancel:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <h2>Apa Anda Yakin Logout?</h2>
+        <button class="confirm" onclick="confirmLogout()">Ya, Logout</button>
+        <button class="cancel" onclick="cancelLogout()">Batal</button>
+    </div>
+
+    <script>
+        function confirmLogout() {
+            window.location.href = 'admin_logout.php?confirm=true';
+        }
+
+        function cancelLogout() {
+            window.location.href = 'admin_dashboard.php';
+        }
+    </script>
+</body>
+</html>
